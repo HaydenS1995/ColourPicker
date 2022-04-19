@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,22 @@
     <link rel="stylesheet" href="style.css">
     <title>Background Generator</title>
 </head>
+
 <body id="gradient">
-<h1>Background Generator</h1>
-<input type="color" class="colour1" name="color1" value="#00FF00">
-<input type="color" class="colour2" name="color2" value="#FF0000">
-<h2>Current Background Generation</h2>
-<h3></h3>  
-<script type="text/javascript" src="script.js"  ></script>
+    <div class="container">
+        <h1>Background Generator</h1>
+        <div>
+            <input type="color" class="colour1" name="color1" value="#00FF00">
+            <input type="color" class="colour2" name="color2" value="#FF0000">
+        </div>
+        <h2>Current Background Generation</h2>
+        <div class="cssGradient">
+            <h3 class="selectedGradient"></h3><button onclick="copyText()">Copy</button>
+        </div>
+        <hr>
+        <button id="Randomizer" class="randombutton">Randomize background</button>
+        <script type="text/javascript" src="script.js"></script>
+    </div>
 </body>
+
 </html>

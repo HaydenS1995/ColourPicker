@@ -1,6 +1,6 @@
 body {
-	font: 'Raleway', sans-serif;
-    color: rgba(0,0,0,.5);
+	font: 'Consolasch', sans-serif;
+    color: rgba(255,255,255,0.6);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .5em;
@@ -9,8 +9,8 @@ body {
 }
 
 h1 {
-    font: 600 3.5em 'Raleway', sans-serif;
-    color: rgba(0,0,0,.5);
+    font: 600 3.5em 'Consolasch', sans-serif;
+    color: rgba(255,255,255,0.6);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .5em;
@@ -19,9 +19,60 @@ h1 {
 
 h3 {
 	font: 900 1em 'Raleway', sans-serif;
-    color: rgba(0,0,0,.5);
+    color: rgba(255,255,255,0.6);
     text-align: center;
     text-transform: none;
     letter-spacing: 0.01em;
 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+input {
+      border: none !important;
+      display: inline-flex;
+      flex-direction: row;
+	width: 48px;
+       margin: 5px;
+	   height: 48px;
+}
+
+button{
+    margin:5px;
+}
+.randombutton {
+    font: 'Consolasch', sans-serif;
+    font-size: 1rem;
+    padding: 1rem 0;
+    width:12rem;
+    text-align: center;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    border: #FFFFFF solid 1px;
+    color: #ED174F;
+}
+
+.randombutton:hover {
+    color: white;
+    background-color: #ED174F;
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(237, 23, 79, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.cssGradient {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+hr {
+    width: 100%;
 }
