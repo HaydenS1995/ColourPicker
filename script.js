@@ -34,10 +34,8 @@ randomBtn.addEventListener("click", randomColourGradient);
 
 
 function copyText() {
-    var copyText = document.querySelector(".selectedGradient")
-    console.log(copyText.style.background);
-    navigator.clipboard.writeText(copyText.textContent);
-    alert("Copied the text: " + copyText.textContent);
+    navigator.clipboard.writeText(css.textContent);
+    alert("Copied the text: " + css.textContent);
 }
 
 
