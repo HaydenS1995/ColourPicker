@@ -35,7 +35,7 @@ randomBtn.addEventListener("click", randomColourGradient);
 
 function copyText() {
     navigator.clipboard.writeText(css.textContent);
-    alert("Copied the text: " + css.textContent);
+    alert("Background Colour Copied: " + css.textContent);
 }
 
 
