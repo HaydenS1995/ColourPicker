@@ -10,7 +10,9 @@ colour2.addEventListener("input" , changeColorGradient);
 
 function changeColorGradient(){ 
     body.style.background = "linear-gradient(to right, " + colour1.value + ", " + colour2.value + ")";
+    body.style.background = "-webkit-linear-gradient(to right, " + colour1.value + ", " + colour2.value + ")";
     css.textContent = body.style.background;
+    
 }
 
 window.onload = function(){
