@@ -62,4 +62,7 @@ hr {
     align-items: center;
     height: 100vh;
 }
+.brandtext {
+    font-size:15px;
+}
 
