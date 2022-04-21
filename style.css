@@ -1,6 +1,6 @@
 body {
 	font: 'Consolasch', sans-serif;
-    color: rgba(255,255,255,0.6);
+    /* color: rgba(255,255,255,0.6); */
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .5em;
@@ -11,14 +11,14 @@ body {
 
 h1 {
     font: 3vw 'Consolasch', sans-serif;
-    color: rgba(255,255,255,0.6);
+    /* color: rgba(255,255,255,0.6); */
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .5em;
 }
 h3, h2 {
 	font: 2vw 'Raleway', sans-serif;
-    color: rgba(255,255,255,1);
+    /* color: rgba(255,255,255,1); */
     text-align: center;
     text-transform: none;
     letter-spacing: 0.01em;
