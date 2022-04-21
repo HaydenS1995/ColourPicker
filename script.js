@@ -17,8 +17,8 @@ function changeColorGradient(){
     cssBackground.textContent = body.style.background;
 }
 function changeTextColor () {
-    cssTextColour.textContent = body.style.color;
     body.style.color = colour3.value;
+    cssTextColour.textContent = body.style.color;
 }
 
 window.onload = function(){
