@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
 body {
 	font: 'Consolasch', sans-serif;
     /* color: rgba(255,255,255,0.6); */
@@ -9,20 +10,22 @@ body {
     overflow: hidden;
 }
 
-h1 {
-    font: 3vw 'Consolasch', sans-serif;
-    /* color: rgba(255,255,255,0.6); */
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: .5em;
-}
 h3, h2 {
-	font: 1.5vw 'Raleway', sans-serif;
+	font: 1.5vw; 
     /* color: rgba(255,255,255,1); */
     text-align: center;
     text-transform: none;
     letter-spacing: 0.01em;
 }
+h1 {
+    font-family: 'Mr Dafoe';
+    margin: 0;
+    font-size: 2.5cw;
+    margin-top: -0.6em;
+    margin-bottom: 0.6em;
+    /* color: rgb(178, 11, 187); */
+    text-shadow: 0 0 0.05em rgb(0, 0, 0), 0 0 0.2em rgb(158, 69, 234), 0 0 0.3em rgb(33, 97, 194);
+  }
 input {
     width: 48px;
     margin: 5px;
