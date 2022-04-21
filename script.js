@@ -17,8 +17,8 @@ function changeColorGradient(){
     cssBackground.textContent = body.style.background;
 }
 function changeTextColor () {
-    body.style.color = colour3.value;
     cssTextColour.textContent = body.style.color;
+    body.style.color = colour3.value;
 }
 
 window.onload = function(){
@@ -27,6 +27,7 @@ window.onload = function(){
 }
 
 var randomBtn = document.querySelector("#Randomizer");
+var random2Btn = document.querySelector("#Randomizer2");
 
 
 function random() {
@@ -39,18 +40,20 @@ function randomColourGradient() {
     changeColorGradient();
 }
 
+function randomTextColor(){
+    colour3.value =  "#" + random();
+    changeTextColor();
+}
+
 randomBtn.addEventListener("click", randomColourGradient);
+random2Btn.addEventListener("click", randomTextColor);
 
 
-function copyBackground() {
-    navigator.clipboard.writeText(cssBackground.textContent);
-    alert("Background Colour Copied: " + cssBackground.textContent);
+function copyBackground(cssColourValue) {
+    navigator.clipboard.writeText(cssColourValue.textContent);
+    alert("Colour Copied: " + cssColourValue.textContent);
 }
 
-function copyFontColour() {
-    navigator.clipboard.writeText(cssTextColour.textContent);
-    alert("Background Colour Copied: " + cssTextColour.textContent);
-}
 
 
 
