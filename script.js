@@ -65,8 +65,16 @@ function randomTextColor(){
     changeTextColor();
 }
 
+function randomTextShadow() {
+    colour4.value = "#" + random();
+    colour5.value = "#" + random();
+    colour6.value = "#" + random();
+    changeHeadingTexts()
+}
+
 randomBtn.addEventListener("click", randomColourGradient);
 random2Btn.addEventListener("click", randomTextColor);
+random3Btn.addEventListener("click", randomTextShadow);
 
 
 function copyBackground(cssColourValue) {
