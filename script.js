@@ -1,14 +1,25 @@
 var colour1 = document.querySelector(".colour1");
 var colour2 = document.querySelector(".colour2");
 var colour3 = document.querySelector(".colour3");
+var colour4 = document.querySelector(".colour4");
+var colour5 = document.querySelector(".colour5");
+var colour6 = document.querySelector(".colour6");
 var cssBackground = document.querySelector('.cssBackground');
 var cssTextColour = document.querySelector('.cssTextColour');
+var cssTextShadow = document.querySelector('.cssTextShadow');
 var body= document.getElementById("gradient");
+
+var headingColour = document.querySelector(".headingColour");
+
+
 
 
 colour1.addEventListener("input" , changeColorGradient);
 colour2.addEventListener("input" , changeColorGradient);
 colour3.addEventListener("input" , changeTextColor);
+colour4.addEventListener("input" , changeHeadingTexts);
+colour5.addEventListener("input" , changeHeadingTexts);
+colour6.addEventListener("input" , changeHeadingTexts);
 
 
 function changeColorGradient(){ 
@@ -21,13 +32,22 @@ function changeTextColor () {
     cssTextColour.textContent = body.style.color;
 }
 
+function changeHeadingTexts() {
+    
+    headingColour.style.textShadow = "0 0 0.05em" + colour4.value +", 0 0 0.2em "+ colour5.value +", 0 0 0.3em " + colour6.value ;
+    cssTextShadow.textContent = headingColour.style.textShadow;
+}
+
 window.onload = function(){
     randomColourGradient();
     changeTextColor();
+    changeHeadingTexts()
 }
 
 var randomBtn = document.querySelector("#Randomizer");
 var random2Btn = document.querySelector("#Randomizer2");
+var random3Btn = document.querySelector("#Randomizer3");
+
 
 
 function random() {
