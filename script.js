@@ -35,7 +35,7 @@ function changeTextColor () {
 function changeHeadingTexts() {
     
     headingColour.style.textShadow = "0 0 0.05em" + colour4.value +", 0 0 0.2em "+ colour5.value +", 0 0 0.3em " + colour6.value ;
-    cssTextShadow.textContent = headingColour.style.textShadow;
+    cssTextShadow.textContent = "text-shadow: " + headingColour.style.textShadow;
 }
 
 window.onload = function(){
@@ -77,7 +77,7 @@ random2Btn.addEventListener("click", randomTextColor);
 random3Btn.addEventListener("click", randomTextShadow);
 
 
-function copyBackground(cssColourValue) {
+function copyCss(cssColourValue) {
     navigator.clipboard.writeText(cssColourValue.textContent);
     alert("Colour Copied: " + cssColourValue.textContent);
 }
