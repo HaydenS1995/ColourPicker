@@ -10,6 +10,7 @@ var cssTextShadow = document.querySelector('.cssTextShadow');
 var body= document.getElementById("gradient");
 var textHeadingSize = document.querySelector(".textHeadingSize");
 var headingColour = document.querySelector(".headingColour");
+var headingColour2 = document.querySelector(".heading2");
 
 
 
@@ -24,6 +25,7 @@ textHeadingSize.addEventListener("input" , changeHeadingTextSize);
 
 function changeHeadingTextSize(){
     headingColour.style.fontSize = textHeadingSize.value + "%" ;
+    headingColour2.style.fontSize = textHeadingSize.value + "%" ;
     console.log(textHeadingSize.value);
 }
 
@@ -40,6 +42,7 @@ function changeTextColor () {
 function changeHeadingTexts() {
     
     headingColour.style.textShadow = "0 0 0.05em" + colour4.value +", 0 0 0.2em "+ colour5.value +", 0 0 0.3em " + colour6.value ;
+    headingColour2.style.textShadow = "0 0 0.15em" + colour4.value +", 0 0 0.4em "+ colour5.value +", 0 0 0.4em " + colour6.value ;
     cssTextShadow.textContent = "text-shadow: " + headingColour.style.textShadow;
 }
 
