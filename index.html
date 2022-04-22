@@ -25,7 +25,22 @@
         <div class="row">
             <div class="col">
                 <h1 class="headingColour">Background Generator</h1>
-                <input type="color" class="colour1" name="color1" value="#00FF00">
+                <hr>
+                <div class="tab-wrap">
+                    <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
+                    <label for="tab1">gradient</label>
+                    
+                    <input type="radio" id="tab2" name="tabGroup1" class="tab">
+                    <label for="tab2">Text</label>
+                    
+                    <input type="radio" id="tab3" name="tabGroup1" class="tab">
+                    <label for="tab3">Shadow</label>
+
+                    <input type="radio" id="tab4" name="tabGroup1" class="tab">
+                    <label for="tab4">Heading Size</label>
+
+                    <div class="tab__content">
+                        <input type="color" class="colour1" name="color1" value="#00FF00">
                 <input type="color" class="colour2" name="color2" value="#FF0000">
                 <h2 class="cssBackground textcontainer">Current Background Generation</h2>
                 <div>
@@ -33,27 +48,33 @@
                 </div>
                 <br>
                 <button id="Randomizer" class="randombutton btn btn-lg">Randomize background</button>
-                <hr>
-
-                <p><input type="color" class="colour3" name="color3" value="#000000"></p>
-                <h2 class="cssTextColour textcontainer">Current Font Colour</h2>
-                <h2 class="textcontainer">Current Font Colour</h2>
-                <h3 class="selectedGradient"></h3><button onclick="copyCss(cssTextColour)">Copy</button>
-                <br>
-                <br>
-                <button id="Randomizer2" class="randombutton btn btn-lg">Randomize font color</button>
-                <hr>
-                <div>
-                    <p><input type="color" class="colour4" name="colour4">
-                        <input type="color" class="colour5" name="colour5">
-                        <input type="color" class="colour6" name="colour6">
+                    </div>
+                    <div class="tab__content">
+                        <p><input type="color" class="colour3" name="color3" value="#000000"></p>
+                        <h2 class="cssTextColour textcontainer">Current Font Colour</h2>
+                        <h2 class="textcontainer">Current Font Colour</h2>
+                        <h3 class="selectedGradient"></h3><button onclick="copyCss(cssTextColour)">Copy</button>
                         <br>
-                    <h2 class="cssTextShadow textcontainer">Current Font Colour</h2>
-                    <h3 class="selectedGradient"></h3><button onclick="copyCss(cssTextShadow)">Copy</button>
-                    <br>
-                    <br>
-                    <p><button id="Randomizer3" class="randombutton btn btn-lg">Randomize font color</button></p>
-                    </p>
+                        <br>
+                        <button id="Randomizer2" class="randombutton btn btn-lg">Randomize font color</button>
+                    </div>
+                    <div class="tab__content">
+                        <p><input type="color" class="colour4" name="colour4">
+                            <input type="color" class="colour5" name="colour5">
+                            <input type="color" class="colour6" name="colour6">
+                            <br>
+                        <h2 class="cssTextShadow textcontainer">Current Font Colour</h2>
+                        <h3 class="selectedGradient"></h3><button onclick="copyCss(cssTextShadow)">Copy</button>
+                        <br>
+                        <br>
+                        <p><button id="Randomizer3" class="randombutton btn btn-lg">Randomize font color</button></p>
+                        </p>
+                    </div>
+                    <div class="tab__content">
+                        <div class="slidecontainer">
+                            <input type="range" min="100" max="400" value="250" class="textHeadingSize slider" id="myRange">
+                        </div>
+                    </div>
                 </div>
 
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

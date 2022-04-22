@@ -8,7 +8,7 @@ var cssBackground = document.querySelector('.cssBackground');
 var cssTextColour = document.querySelector('.cssTextColour');
 var cssTextShadow = document.querySelector('.cssTextShadow');
 var body= document.getElementById("gradient");
-
+var textHeadingSize = document.querySelector(".textHeadingSize");
 var headingColour = document.querySelector(".headingColour");
 
 
@@ -20,7 +20,12 @@ colour3.addEventListener("input" , changeTextColor);
 colour4.addEventListener("input" , changeHeadingTexts);
 colour5.addEventListener("input" , changeHeadingTexts);
 colour6.addEventListener("input" , changeHeadingTexts);
+textHeadingSize.addEventListener("input" , changeHeadingTextSize);
 
+function changeHeadingTextSize(){
+    headingColour.style.fontSize = textHeadingSize.value + "%" ;
+    console.log(textHeadingSize.value);
+}
 
 function changeColorGradient(){ 
     body.style.background = "linear-gradient(to right, " + colour1.value + ", " + colour2.value + ")";
