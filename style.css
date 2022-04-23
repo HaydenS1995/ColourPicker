@@ -285,3 +285,9 @@ hr {
     background: #04AA6D; /* Green background */
     cursor: pointer; /* Cursor on hover */
   }
+  li{
+      list-style: none;
+      text-align: center;
+      display: inline-block; 
+      position: relative;
+  }
