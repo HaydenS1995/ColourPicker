@@ -23,6 +23,7 @@ colour4.addEventListener("input", changeHeadingTexts);
 colour5.addEventListener("input", changeHeadingTexts);
 colour6.addEventListener("input", changeHeadingTexts);
 colour7.addEventListener("input", changeColorGradient);
+textHeadingSize.addEventListener("input", changeHeadingTextSize);
 
 
 
