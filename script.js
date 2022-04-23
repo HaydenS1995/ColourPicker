@@ -12,27 +12,34 @@ const body = document.getElementById("gradient");
 const textHeadingSize = document.querySelector(".textHeadingSize");
 const headingColour = document.querySelector(".headingColour");
 const headingColour2 = document.querySelector(".heading2");
-var selected = document.querySelector('input[type=radio][name=backgroundType]:checked');
+let selected = document.querySelector('input[type=radio][name=backgroundType]:checked');
+const randomBtn = document.querySelector("#Randomizer");
+const random2Btn = document.querySelector("#Randomizer2");
+const random3Btn = document.querySelector("#Randomizer3");
 
 let rgb;
 
+//Listening to buttons and colours
 colour1.addEventListener("input", changeColorGradient);
 colour2.addEventListener("input", changeColorGradient);
 colour3.addEventListener("input", changeTextColor);
-colour4.addEventListener("input", changeHeadingTexts);
-colour5.addEventListener("input", changeHeadingTexts);
-colour6.addEventListener("input", changeHeadingTexts);
+colour4.addEventListener("input", changeHeadingTextShadow);
+colour5.addEventListener("input", changeHeadingTextShadow);
+colour6.addEventListener("input", changeHeadingTextShadow);
 colour7.addEventListener("input", changeColorGradient);
+randomBtn.addEventListener("click", randomColourGradient);
+random2Btn.addEventListener("click", randomTextColor);
+random3Btn.addEventListener("click", randomTextShadow);
 textHeadingSize.addEventListener("input", changeHeadingTextSize);
-
-
-
+//Functions
 function changeHeadingTextSize() {
     headingColour.style.fontSize = textHeadingSize.value + "%";
     headingColour2.style.fontSize = textHeadingSize.value + "%";
-    console.log(textHeadingSize.value);
 }
-
+function changeTextColor() {
+    body.style.color = colour3.value;
+    cssTextColour.textContent = body.style.color;
+}
 function changeColorGradient() {
     selected = document.querySelector('input[type=radio][name=backgroundType]:checked');
     if (selected.value === "radial") {
@@ -51,57 +58,35 @@ function changeColorGradient() {
         cssBackground.textContent = body.style.background;
     }
 }
-function changeTextColor() {
-    body.style.color = colour3.value;
-    cssTextColour.textContent = body.style.color;
-}
-function changeHeadingTexts() {
-
+function changeHeadingTextShadow() {
     headingColour.style.textShadow = "0 0 0.05em" + colour4.value + ", 0 0 0.2em " + colour5.value + ", 0 0 0.3em " + colour6.value;
     headingColour2.style.textShadow = "0 0 0.15em" + colour4.value + ", 0 0 0.4em " + colour5.value + ", 0 0 0.4em " + colour6.value;
     cssTextShadow.textContent = "text-shadow: " + headingColour.style.textShadow;
 }
-
 window.onload = function () {
     randomColourGradient();
     changeTextColor();
-    changeHeadingTexts();
+    changeHeadingTextShadow();
 }
-
-var randomBtn = document.querySelector("#Randomizer");
-var random2Btn = document.querySelector("#Randomizer2");
-var random3Btn = document.querySelector("#Randomizer3");
-
-
-
 function random() {
     return Math.floor(Math.random() * 16777215).toString(16);
 }
-
 function randomColourGradient() {
     colour1.value = "#" + random();
     colour2.value = "#" + random();
     colour7.value = "#" + random();
     changeColorGradient();
 }
-
 function randomTextColor() {
     colour3.value = "#" + random();
     changeTextColor();
 }
-
 function randomTextShadow() {
     colour4.value = "#" + random();
     colour5.value = "#" + random();
     colour6.value = "#" + random();
-    changeHeadingTexts()
+    changeHeadingTextShadow()
 }
-
-randomBtn.addEventListener("click", randomColourGradient);
-random2Btn.addEventListener("click", randomTextColor);
-random3Btn.addEventListener("click", randomTextShadow);
-
-
 function copyCss(cssColourValue) {
     navigator.clipboard.writeText(cssColourValue.textContent);
     alert("Colour Copied: " + cssColourValue.textContent);
