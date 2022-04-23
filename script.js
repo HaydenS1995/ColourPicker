@@ -85,7 +85,7 @@ function randomTextShadow() {
     colour4.value = "#" + random();
     colour5.value = "#" + random();
     colour6.value = "#" + random();
-    changeHeadingTextShadow()
+    changeHeadingTextShadow();
 }
 function copyCss(cssColourValue) {
     navigator.clipboard.writeText(cssColourValue.textContent);
